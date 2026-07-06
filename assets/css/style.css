@@ -85,7 +85,7 @@ h3{
 
     background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("../img/cover.jpeg");
+   url("../img/cover.webp")
 
     background-size:cover;
     background-position:center;
