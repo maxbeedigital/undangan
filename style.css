@@ -1,7 +1,232 @@
+/* ==========================
+   THE WEDDING OF
+   Munir & Della
+========================== */
+
 :root{
-  --primary:#6d0019;
-  --gold:#d4af37;
-  --cream:#faf7f2;
-  --dark:#1d1d1d;
-  --white:#ffffff;
+    --primary:#6d0019;
+    --gold:#d4af37;
+    --cream:#faf7f2;
+    --dark:#222;
+    --white:#ffffff;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--cream);
+    color:var(--dark);
+    font-family:'Poppins',sans-serif;
+    line-height:1.8;
+}
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;
+}
+
+h1{
+    font-size:58px;
+}
+
+h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:28px;
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+#loading{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+}
+
+/* ==========================
+   COVER
+========================== */
+
+#cover{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+
+    background:
+    linear-gradient(rgba(250,247,242,.80),rgba(250,247,242,.80)),
+    url("assets/img/cover.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+#cover p{
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+#cover h1{
+    margin:20px 0;
+}
+
+#cover span{
+    color:var(--gold);
+}
+
+#guest{
+    margin:30px 0;
+    font-size:18px;
+}
+
+button{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    box-shadow:var(--shadow);
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+background:var(--gold);
+
+color:black;
+
+}
+
+/* ==========================
+SECTION
+========================== */
+
+section{
+
+padding:90px 20px;
+
+max-width:1000px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+/* ==========================
+LINK
+========================== */
+
+a{
+
+color:white;
+
+background:var(--primary);
+
+padding:14px 25px;
+
+border-radius:40px;
+
+display:inline-block;
+
+text-decoration:none;
+
+margin-top:20px;
+
+transition:.3s;
+
+}
+
+a:hover{
+
+background:var(--gold);
+
+color:black;
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+
+padding:50px;
+
+text-align:center;
+
+background:#111;
+
+color:white;
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:42px;
+
+}
+
+h2{
+
+font-size:34px;
+
+}
+
+h3{
+
+font-size:24px;
+
+}
+
+section{
+
+padding:70px 20px;
+
+}
+
 }
