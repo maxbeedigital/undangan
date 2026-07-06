@@ -1,16 +1,23 @@
-const btn=document.getElementById("openInvitation");
-const cover=document.getElementById("cover");
+document.addEventListener("DOMContentLoaded", function () {
 
-btn.addEventListener("click",()=>{
+    const btn = document.getElementById("openInvitation");
+    const cover = document.getElementById("cover");
 
-cover.style.opacity="0";
+    if(btn){
 
-cover.style.transition=".8s";
+        btn.addEventListener("click", function(){
 
-setTimeout(()=>{
+            cover.style.opacity="0";
+            cover.style.transition="all .8s ease";
 
-cover.style.display="none";
+            setTimeout(function(){
 
-},800);
+                cover.style.display="none";
+
+            },800);
+
+        });
+
+    }
 
 });
