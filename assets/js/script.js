@@ -1,23 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const btn = document.getElementById("openInvitation");
-    const cover = document.getElementById("cover");
+    // ===========================
+    // DATA
+    // ===========================
 
-    if(btn){
+    document.getElementById("coupleName").innerHTML =
+        `${wedding.groom.nickName} <span>&</span> ${wedding.bride.nickName}`;
 
-        btn.addEventListener("click", function(){
+    document.getElementById("weddingDate").innerHTML =
+        wedding.wedding.date;
 
-            cover.style.opacity="0";
-            cover.style.transition="all .8s ease";
+    // ===========================
+    // NAMA TAMU
+    // ===========================
 
-            setTimeout(function(){
+    const url = new URL(window.location.href);
 
-                cover.style.display="none";
+    const guest = url.searchParams.get("to");
 
-            },800);
+    if (guest) {
 
-        });
+        document.getElementById("guestName").innerHTML =
+            decodeURIComponent(guest);
 
     }
+
+    // ===========================
+    // BUKA UNDANGAN
+    // ===========================
+
+    const btn = document.getElementById("openInvitation");
+
+    btn.addEventListener("click", () => {
+
+        document.getElementById("cover").style.opacity = "0";
+
+        setTimeout(() => {
+
+            document.getElementById("cover").style.display = "none";
+
+        },700);
+
+    });
 
 });
